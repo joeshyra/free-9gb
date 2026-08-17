@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaim Kuota Kemerdekaan 9GB Gratis!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-red-700 via-red-600 to-gray-900 min-h-screen text-white font-sans flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="p-4 text-center bg-red-800 shadow-md border-b border-red-500">
+        <h1 class="text-xl font-bold tracking-wider"><i class="fa-solid fa-flag text-white mr-2"></i> KEMERDEKAAN RI</h1>
+        <p class="text-xs text-red-200">Spesial Promo Hari Kemerdekaan</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container mx-auto px-4 py-8 max-w-md">
+        
+        <!-- Hero Card -->
+        <div class="bg-white text-gray-800 rounded-2xl shadow-2xl p-6 text-center relative overflow-hidden border-4 border-red-500">
+            <!-- Badge -->
+            <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl uppercase tracking-widest">
+                Terbatas!
+            </div>
+
+            <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-inner">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+
+            <h2 class="text-2xl font-black text-red-700 mb-1">KUOTA 9GB 7 HARI</h2>
+            <p class="text-sm text-gray-500 mb-6">Rayakan kemerdekaan dengan internetan sepuasnya tanpa batas!</p>
+
+            <!-- Tombol Masuk Langsung (Bagi yang hanya mampir) -->
+            <div class="mb-6">
+                <a href="https://whatsapp.com/channel/0029VbCZuIsCsU9Jv3w1mM3X" target="_blank" 
+                   class="block w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-semibold rounded-xl transition border border-gray-300">
+                    <i class="fa-solid fa-right-to-bracket mr-2"></i> Langsung Masuk Saluran
+                </a>
+            </div>
+
+            <hr class="mb-6 border-gray-200">
+
+            <!-- Bagian Quest / Misi -->
+            <div id="quest-section">
+                <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-4 text-left">
+                    <h3 class="text-sm font-bold text-red-800 mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i> Syarat & Ketentuan Kuota:</h3>
+                    <p class="text-xs text-red-700 leading-relaxed">
+                        Selesaikan misi di bawah ini untuk membuka akses klaim kuota gratis ke nomor kamu!
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <div class="flex justify-between text-xs font-semibold text-gray-600 mb-1">
+                        <span>Progress Misi Bagikan</span>
+                        <span id="progress-text">0 / 3 Grup</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                        <div id="progress-bar" class="bg-red-600 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <button onclick="shareToWhatsApp()" id="share-btn" 
+                        class="w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Bagikan ke WhatsApp (<span id="share-count">0</span>/3)
+                </button>
+            </div>
+
+            <!-- Bagian Selesai Quest (Hidden Awalnya) -->
+            <div id="success-section" class="hidden text-center">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl animate-bounce">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-lg font-bold text-green-700 mb-1">Misi Selesai!</h3>
+                <p class="text-xs text-gray-600 mb-4">Yeay! Kamu berhasil menyelesaikan misi kemerdekaan. Klik tombol di bawah untuk klaim hadiahmu dan bergabung ke komunitas resmi!</p>
+                
+                <a href="https://whatsapp.com/channel/0029VbCZuIsCsU9Jv3w1mM3X" target="_blank"
+                   class="block w-full py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl shadow-lg transition text-sm">
+                    <i class="fa-solid fa-box-open mr-2"></i> Klaim Kuota & Gabung Komunitas
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Info Komunitas Texureon Card -->
+        <div class="mt-6 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 text-white">
+            <h4 class="font-bold text-sm mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-palette text-yellow-400"></i> The official Texureon WhatsApp!
+            </h4>
+            <p class="text-xs text-gray-200 leading-relaxed">
+                Looking for the best Addons, Texture Packs, or DLC info for Minecraft? We share curated content, clean links, and visuals to make your world shine. 🎨✨
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-xs text-gray-300">
+        &copy; 2026 Promo Kemerdekaan RI. All rights reserved.
+    </footer>
+
+    <!-- JavaScript untuk Interaksi Misi -->
+    <script>
+        let shares = 0;
+        const targetShares = 3;
+
+        function shareToWhatsApp() {
+            // Membuka share WhatsApp API
+            const message = encodeURIComponent("🎉 Klaim Kuota Gratis Kemerdekaan 9GB 7 Hari! Cepat ambil sebelum kehabisan di sini: " + window.location.href);
+            window.open(`https://api.whatsapp.com/send?text=${message}`, '_blank');
+
+            // Tambah progress
+            if (shares < targetShares) {
+                shares++;
+                updateProgress();
+            }
+        }
+
+        function updateProgress() {
+            document.getElementById('share-count').innerText = shares;
+            document.getElementById('progress-text').innerText = `${shares} / ${targetShares} Grup`;
+            let percentage = (shares / targetShares) * 100;
+            document.getElementById('progress-bar').style.width = `${percentage}%`;
+
+            if (shares >= targetShares) {
+                setTimeout(() => {
+                    document.getElementById('quest-section').classList.add('hidden');
+                    document.getElementById('success-section').classList.remove('hidden');
+                }, 500);
+            }
+        }
+    </script>
+</body>
+  </html>
+  
